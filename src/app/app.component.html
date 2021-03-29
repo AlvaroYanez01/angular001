@@ -1,3 +1,42 @@
-<h1>Angular</h1>
-<h2>FISEI</h2>
-<h3>2021</h3>
+<div class="container mt-4" >
+<div class="row">
+    <h2>
+        <!-- Interpolación {{nombreVariable}}-->
+    Hoy es día: {{diaSemana}}
+    <br>
+    Bienvenido a ANGULAR {{nombre}} {{apellido}}
+    <br>
+    El apellido del usuario es {{apellido}}
+</h2>
+<!-- Podemos hacer uso de variables que se crean en el archivo.ts-->
+La suma es  = {{sumar(20,40)/20}}
+
+<br>
+<input type="text" class="form-container" [placeholder]="mostrarMensaje()" [disabled]="activado">
+
+<!--<input type="text" class="form-container" placeholder="{{diaSemana}}">-->
+
+<img [src]="rutaImagen" alt="imagen" width="100px" height="200px">
+
+<h3>{{textoEventBinding}}</h3>
+<br>
+<br>
+<button class="btn btn-primary" (click)="cambiarTexto()">Presionar el Boton</button>
+
+
+<!--TWO WAY DATABIDING-->
+<!--Manipulacion de datos doble via
+
+Para usar el modulo de cadenaTwoWay debemos hacer una importacion
+en app.module la cual es FORMSModule-->
+<br>
+
+<input type="text" class="form-control" placeholder="Ingrese Su Nombre" 
+[(ngModel)]="cadenaTwoWayBinding">
+
+{{cadenaTwoWayBinding}}
+
+</div>
+
+
+</div>
